@@ -1,0 +1,21 @@
+<polymer-element name="card-collection">
+  <link rel="import" href="magiccard.html">
+  <link rel="import" href="createcard.html">
+  <link rel="import" href="dbconnector.html">
+  <template>
+    <template repeat="{{card in cards}}">
+      <magic-card 
+        card="{{card['card']}}"
+        type="{{card['type']}}"
+        cost="{{card['cost']}}"
+        power="{{card['power']}}"
+        toughness="{{card['toughness']}}"
+        description="{{card['description']}}"
+        picture="{{card['picture']}}"
+        on-delete="{{delete}}"></magic-card>
+    </template>
+    <db-connector name="magic-card-collection" store="magic-card" collection="{{cards}}" key="card"></db-connector>
+    <create-card on-update="{{add}}"></create-card>
+  </template>
+  <script type="application/dart" src="cardcollection.dart"></script>
+</polymer-element>

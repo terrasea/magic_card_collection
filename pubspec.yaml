@@ -1,0 +1,8 @@
+name: Magic_Card_Collection
+description: A sample Polymer application
+dependencies:
+  lawndart: any
+  polymer: any
+transformers:
+- polymer:
+    entry_points: web/magic_card_collection.html

@@ -1,0 +1,6 @@
+.buildlog
+packages/*
+web/clickcounter.dart
+web/clickcounter.html
+web/packages
+pubspec.lock
